@@ -8,7 +8,7 @@ class item{
        this.creatediv(itemName);
 }
 
-creatediv(itemName){
+    creatediv(itemName){
     let input = document.createElement('input');
     input.value = itemName;
     input.disabled = true;
@@ -25,7 +25,7 @@ creatediv(itemName){
     
      let removebutton = document.createElement('button');
     removebutton.innerHTML = "remove"
-    removebutton.classlist.add('removebutton');
+    removebutton.classslist.add('removebutton');
     
     
     container.appendChild(itemBox);
@@ -49,14 +49,14 @@ remove(item){
 }
  
 } 
-Function check(){
+function check(){
     if(input.value != ""){
         new item(input.value);
         input.value = "";
         
     }    
-} 
-
+ 
+}
 
 addbutton.addEventListener('click', check);
 window.addEventListener('keydown', (e) => {
@@ -65,3 +65,6 @@ window.addEventListener('keydown', (e) => {
     }
     
 })
+
+
+
