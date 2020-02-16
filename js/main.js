@@ -1,6 +1,6 @@
-const addbutton = document.querySelector('.addbutton');
-var inputvalue = document.querySelector('.container');
-const container = document.querySelector('container');
+const addButton = document.querySelector('.addbutton');
+var input = document.querySelector('.input ');
+const container = document.querySelector('.container');
 
 class item{
     constructor(itemName){
@@ -12,34 +12,34 @@ class item{
     let input = document.createElement('input');
     input.value = itemName;
     input.disabled = true;
-    input.classlist.add('item_input');
+    input.classList.add('item_input');
     input.Type = "text";
     
     
     let itemBox = document.createElement('div');
     itemBox,classlist.add('item');
     
-    let donebutton = document.createElement('button');
-    donebutton.innerHTML = "done"
-    donebutton.classlist.add('donebutton');
+    let editButton = document.createElement('button');
+    editbutton.innerHTML = "edit"
+    editbutton.classList.add('editbutton');
     
-     let removebutton = document.createElement('button');
+    let removeButton = document.createElement('button');
     removebutton.innerHTML = "remove"
-    removebutton.classslist.add('removebutton');
+    removebutton.classList.add('removebutton');
     
     
     container.appendChild(itemBox);
     
     itemBox.appendChild(input);
-    itemBox.appendChild(donebutton);
+    itemBox.appendChild(editbutton);
     itemBox.appendChild(removebutton);
      
-    donebutton.addEventListener('click', () => this.done(input));
+    editbutton.addEventListener('click', () => this.edit(input));
     removebutton.addEventListener('click', () => this.remove(itembox));
     
 }
 
-done(input){
+edit(input){
     input.disabled = !input.disabled;
     
 }
@@ -55,16 +55,12 @@ function check(){
         input.value = "";
         
     }    
- 
 }
 
-addbutton.addEventListener('click', check);
+addButton.addEventListener('click', check);
 window.addEventListener('keydown', (e) => {
     if(e.which == 13){
         check();
     }
     
 })
-
-
-
